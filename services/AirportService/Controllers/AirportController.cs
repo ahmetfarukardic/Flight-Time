@@ -1,10 +1,11 @@
-using Microsoft.AspNetCore.Mvc;
-using AirportService.Repositories;
+using Microsoft.AspNetCore.Mvc;         // ControllerBase, Route, HttpGet, IActionResult, FromQuery
+using System.Threading.Tasks;
+using AirportService.Repositories; 
 
 namespace AirportService.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/airports")]
     public class AirportsController : ControllerBase
     {
         private readonly IAirportRepository _airportRepo;

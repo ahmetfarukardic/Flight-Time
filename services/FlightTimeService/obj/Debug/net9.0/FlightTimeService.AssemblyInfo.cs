@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FlightTimeService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+626606cb1094539d3242a3f1e27311da6cc9564f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d2588fd6f4245234aefe1c6d08dd4eb695c9e69")]
 [assembly: System.Reflection.AssemblyProductAttribute("FlightTimeService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FlightTimeService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

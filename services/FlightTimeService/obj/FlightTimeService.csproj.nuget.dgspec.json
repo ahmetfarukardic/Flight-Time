@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\OneDrive\\Masaüstü\\Flight-Time\\services\\FlightTimeService\\FlightTimeService.csproj": {}
+    "C:\\Users\\HP\\OneDrive\\Masaüstü\\Flight-Time\\services\\flighttimeservice\\FlightTimeService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\OneDrive\\Masaüstü\\Flight-Time\\services\\FlightTimeService\\FlightTimeService.csproj": {
+    "C:\\Users\\HP\\OneDrive\\Masaüstü\\Flight-Time\\services\\flighttimeservice\\FlightTimeService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\OneDrive\\Masaüstü\\Flight-Time\\services\\FlightTimeService\\FlightTimeService.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\OneDrive\\Masaüstü\\Flight-Time\\services\\flighttimeservice\\FlightTimeService.csproj",
         "projectName": "FlightTimeService",
-        "projectPath": "C:\\Users\\HP\\OneDrive\\Masaüstü\\Flight-Time\\services\\FlightTimeService\\FlightTimeService.csproj",
+        "projectPath": "C:\\Users\\HP\\OneDrive\\Masaüstü\\Flight-Time\\services\\flighttimeservice\\FlightTimeService.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\OneDrive\\Masaüstü\\Flight-Time\\services\\FlightTimeService\\obj\\",
+        "outputPath": "C:\\Users\\HP\\OneDrive\\Masaüstü\\Flight-Time\\services\\flighttimeservice\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

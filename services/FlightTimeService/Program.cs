@@ -5,6 +5,15 @@ var builder = WebApplication.CreateBuilder(args);
 // Controller'ları ekle
 builder.Services.AddControllers();
 builder.Services.AddHttpClient();  // <-- Bu satır olmalı!
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
 
 
 // Swagger için gerekli servisleri ekle
@@ -30,7 +39,7 @@ app.UseSwaggerUI(c =>
 });
 
 app.UseAuthorization();
-
+app.UseCors("AllowAll");
 app.MapControllers();
 
 app.Run();

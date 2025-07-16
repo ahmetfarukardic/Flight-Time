@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flight Plan Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input {
+      padding: 10px;
+      margin: 5px 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 10px;
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    pre {
+      background-color: #eee;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 20px;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Flight Plan Generator</h2>
+  <label>Aircraft Code:</label>
+  <input type="text" id="aircraftCode" placeholder="e.g. A320" />
+
+  <label>Departure Airport Code:</label>
+  <input type="text" id="departureCode" placeholder="e.g. IST" />
+
+  <label>Arrival Airport Code:</label>
+  <input type="text" id="arrivalCode" placeholder="e.g. JFK" />
+
+  <button onclick="fetchFlightPlan()">Get Flight Plan</button>
+
+  <pre id="result"></pre>
+</div>
+
+<script>
+  async function fetchFlightPlan() {
+    const aircraftCode = document.getElementById('aircraftCode').value;
+    const departureCode = document.getElementById('departureCode').value;
+    const arrivalCode = document.getElementById('arrivalCode').value;
+    const resultElement = document.getElementById('result');
+
+    resultElement.textContent = "Loading...";
+
+    try {
+      const response = await fetch(`http://localhost:5003/api/flights/plan?aircraftCode=${aircraftCode}&departureCode=${departureCode}&arrivalCode=${arrivalCode}`);
+      if (!response.ok) {
+        throw new Error("Request failed: " + response.status);
+      }
+      const data = await response.json();
+      resultElement.textContent = JSON.stringify(data, null, 2);
+    } catch (error) {
+      resultElement.textContent = "Error: " + error.message;
+    }
+  }
+</script>
+
+</body>
+</html>

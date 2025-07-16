@@ -22,10 +22,12 @@ namespace FlightService.Controllers
             [FromQuery] string departureCode,
             [FromQuery] string arrivalCode)
         {
-            // Uçak verisi al
-            var aircraft = await _httpClient.GetFromJsonAsync<object>($"http://localhost:5001/api/aircrafts/{aircraftCode}");
+            // ucak bilgileri
+            var aircraft = await _httpClient.GetFromJsonAsync<AircraftDto>($"http://localhost:5001/api/aircrafts/{aircraftCode}");
             if (aircraft == null)
                 return NotFound("Aircraft not found.");
+
+            int maxSpeed = aircraft.MaxSpeed;
 
             // Kalkış havaalanı al
             var departureAirport = await _httpClient.GetFromJsonAsync<object>($"http://localhost:5002/api/airports/{departureCode}");
@@ -37,17 +39,22 @@ namespace FlightService.Controllers
             if (arrivalAirport == null)
                 return NotFound("Arrival airport not found.");
 
-            // Mesafeyi al
-            var distanceResponse = await _httpClient.GetFromJsonAsync<object>(
+            var distanceResponse = await _httpClient.GetFromJsonAsync<DistanceResponseDto>(
                 $"http://localhost:5002/api/airports/distance?code1={departureCode}&code2={arrivalCode}"
             );
+
+            if (distanceResponse == null)
+                return NotFound("Distance info not found.");
+
+            double averageTimeHours = distanceResponse.DistanceInKm / maxSpeed;
 
             return Ok(new
             {
                 Aircraft = aircraft,
                 From = departureAirport,
                 To = arrivalAirport,
-                Distance = distanceResponse
+                Distance = distanceResponse,
+                AverageTimeHours = averageTimeHours
             });
         }
     }

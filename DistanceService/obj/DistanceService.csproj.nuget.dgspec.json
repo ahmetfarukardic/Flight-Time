@@ -1,31 +1,29 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dell-Y\\Desktop\\test\\FlightTimeSolution\\DistanceService\\DistanceService.csproj": {}
+    "C:\\Users\\HP\\OneDrive\\Masaüstü\\Flight-Time\\DistanceService\\DistanceService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dell-Y\\Desktop\\test\\FlightTimeSolution\\DistanceService\\DistanceService.csproj": {
+    "C:\\Users\\HP\\OneDrive\\Masaüstü\\Flight-Time\\DistanceService\\DistanceService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dell-Y\\Desktop\\test\\FlightTimeSolution\\DistanceService\\DistanceService.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\OneDrive\\Masaüstü\\Flight-Time\\DistanceService\\DistanceService.csproj",
         "projectName": "DistanceService",
-        "projectPath": "C:\\Users\\Dell-Y\\Desktop\\test\\FlightTimeSolution\\DistanceService\\DistanceService.csproj",
-        "packagesPath": "C:\\Users\\Dell-Y\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dell-Y\\Desktop\\test\\FlightTimeSolution\\DistanceService\\obj\\",
+        "projectPath": "C:\\Users\\HP\\OneDrive\\Masaüstü\\Flight-Time\\DistanceService\\DistanceService.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP\\OneDrive\\Masaüstü\\Flight-Time\\DistanceService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dell-Y\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -70,6 +68,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.18, 8.0.18]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.18, 8.0.18]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.18, 8.0.18]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.18, 8.0.18]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"

@@ -7,9 +7,7 @@ namespace AirportService.Models
     {
         [Key]
         public Guid Id { get; set; }
-
-        public DateTime CreatedDate { get; set; }
-
+        
         public string AirportCode { get; set; }
         public string IcaoCode { get; set; }
         public string IataCode { get; set; }
@@ -27,6 +25,5 @@ namespace AirportService.Models
         public string Timezone { get; set; }
         public string TimezoneAbbrev { get; set; }
 
-        public DateTime? UpdatedDate { get; set; }
     }
 }

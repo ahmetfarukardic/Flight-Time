@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Bu dosya, Web projenizin yayımlama/paket işlemi tarafından kullanılıyor. MSBuild dosyasını düzenleyerek
+bu işlemin davranışını düzenleyebilirsiniz. Bununla ilgili daha fazla bilgi edinmek için https://go.microsoft.com/fwlink/?LinkID=208121 adresini ziyaret edin. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <History>True|2025-07-17T13:05:38.2736725Z||;True|2025-07-17T15:19:47.1847337+03:00||;True|2025-07-17T15:18:34.6202198+03:00||;True|2025-07-16T16:10:19.2583268+03:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

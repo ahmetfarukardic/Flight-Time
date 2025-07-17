@@ -1,0 +1,49 @@
+[
+  {
+    "ContainingType": "AirportService.Controllers.AirportsController",
+    "Method": "GetAirport",
+    "RelativePath": "api/Airports/{IataCode}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IataCode",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "AirportService.Models.Airport",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AirportService.Controllers.AirportsController",
+    "Method": "GetDepartureAndDestinationLocations",
+    "RelativePath": "api/Airports/locations/{departure}/{destination}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "departure",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "destination",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "ContainingType": "DistanceController",
+    "Method": "GetDistance",
+    "RelativePath": "api/distance/{departure}/{destination}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "departure",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "destination",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -15,17 +15,22 @@ namespace RouteService.Controllers
         private readonly IGreatCircleDistanceCalculator _distanceCalculator;
         private readonly HttpClient _httpClient;
         private readonly IRouteRepository _routeRepository;
-        private readonly ApplicationDbContext _context;
+        
 
-        public RouteController(IHttpClientFactory factory , IGreatCircleDistanceCalculator distanceCalculator , ApplicationDbContext context)
+        public RouteController(
+        IHttpClientFactory factory,
+        IGreatCircleDistanceCalculator distanceCalculator,
+        IRouteRepository routeRepository 
+       )
         {
             _httpClient = factory.CreateClient("AirportService");
             _distanceCalculator = distanceCalculator;
-            _context = context;
+            _routeRepository = routeRepository; 
+            
         }
 
         [HttpPost("calculate")]
-        public IActionResult CalculateDistance([FromBody] RouteRequestDto request)
+        public async Task<IActionResult> CalculateDistance([FromQuery] RouteRequestDto request)
         {
             if (request == null || request.Origin == null || request.Destination == null)
             {
@@ -33,7 +38,7 @@ namespace RouteService.Controllers
             }
 
             var waypoints = new List<AirportDto> { request.Origin, request.Destination };
-            int distance = _distanceCalculator.CalculateGreatCircleDistance(waypoints);
+            int distance = await _distanceCalculator.CalculateGreatCircleDistanceAsync(waypoints);
 
             return Ok(new { DistanceKm = distance });
         }
@@ -46,20 +51,25 @@ namespace RouteService.Controllers
 
             // Build full route: origin → waypoints → destination
             var fullRoute = new List<AirportDto> { route.Origin };
-            fullRoute.AddRange(route.Waypoints.Select(wp => new AirportDto
+            if (route.Waypoints != null)
             {
-                Latitude = wp.Latitude,
-                Longitude = wp.Longitude
-            }));
+                fullRoute.AddRange(route.Waypoints.Select(wp => new AirportDto
+                {
+                    Latitude = wp.Latitude,
+                    Longitude = wp.Longitude,
+                    Id = wp.Id,
+                    IataCode = wp.Name
+                }));
+            }
             fullRoute.Add(route.Destination);
 
-            // Calculate distance
-            route.GreatCircleDistance = _distanceCalculator.CalculateGreatCircleDistance(fullRoute);
-            route.TotalDistanceInKm = route.GreatCircleDistance; // or modify if using roads later
+            // Calculate distance asynchronously
+            int distance = await _distanceCalculator.CalculateGreatCircleDistanceAsync(fullRoute);
+            route.GreatCircleDistance = distance;
+            route.TotalDistanceInKm = distance; // you can adjust if you have other distance measures later
 
-            // Save to DB
-            _context.RoutesDb.Add(route);
-            await _context.SaveChangesAsync();
+            // Save using repository
+            await _routeRepository.SaveRouteAsync(route);
 
             return Ok(route);
         }
@@ -67,14 +77,17 @@ namespace RouteService.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetRouteById(string id)
         {
-            var route = await _context.RoutesDb
-                .Include(r => r.Waypoints)
-                .FirstOrDefaultAsync(r => r.Id == id);
-
+            var route = await _routeRepository.GetRouteByIdAsync(id);
             if (route == null)
                 return NotFound();
 
             return Ok(route);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllRoutes()
+        {
+            return Ok(new List<Routes>());
         }
     }
 }

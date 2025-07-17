@@ -1,0 +1,95 @@
+[
+  {
+    "ContainingType": "RouteService.Controllers.RouteController",
+    "Method": "GetAllRoutes",
+    "RelativePath": "api/Route",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RouteService.Controllers.RouteController",
+    "Method": "GetRouteById",
+    "RelativePath": "api/Route/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RouteService.Controllers.RouteController",
+    "Method": "CalculateDistance",
+    "RelativePath": "api/Route/calculate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Origin.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Origin.Latitude",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "Origin.Longitude",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "Origin.IataCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Destination.Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Destination.Latitude",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "Destination.Longitude",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "Destination.IataCode",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RouteService.Controllers.RouteController",
+    "Method": "CalculateAndSaveRoute",
+    "RelativePath": "api/Route/calculate-and-save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "route",
+        "Type": "RouteService.Models.Routes",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,4 +1,5 @@
-﻿using RouteService.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using RouteService.Data;
 using RouteService.Models;
 using System;
 using System.Collections.Generic;
@@ -7,11 +8,11 @@ namespace RouteService.Repositories
 {
     public interface IRouteRepository
     {
-    
-
+        Task SaveRouteAsync(Routes route);
+        Task<Routes?> GetRouteByIdAsync(string id);
     }
 
-    public class RouteRepository : IRouteRepository, IGreatCircleDistanceCalculator
+    public class RouteRepository : IRouteRepository
     {
         private readonly ApplicationDbContext _context;
 
@@ -20,11 +21,17 @@ namespace RouteService.Repositories
             _context = context;
         }
 
-        public int CalculateGreatCircleDistance(List<AirportDto> waypoints)
+        public async Task SaveRouteAsync(Routes route)
         {
-            var totalDistanceInKm = new DistanceCalculator();
-            var result = totalDistanceInKm.CalculateGreatCircleDistance(waypoints);
-            return result;
+            _context.RoutesDb.Add(route);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<Routes?> GetRouteByIdAsync(string id)
+        {
+            return await _context.RoutesDb
+                .Include(r => r.Waypoints)
+                .FirstOrDefaultAsync(r => r.Id == id);
         }
     }
 }

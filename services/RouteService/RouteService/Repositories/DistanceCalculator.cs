@@ -4,28 +4,33 @@ namespace RouteService.Repositories
 {
     public interface IGreatCircleDistanceCalculator
     {
-        int CalculateGreatCircleDistance(List<AirportDto> waypoints);
+        Task<int> CalculateGreatCircleDistanceAsync(List<AirportDto> waypoints);
+
     }
     public class DistanceCalculator : IGreatCircleDistanceCalculator
     {
         private const double EarthRadiusKm = 6371.0;
 
-        public int CalculateGreatCircleDistance(List<AirportDto> waypoints)
+        public async Task<int> CalculateGreatCircleDistanceAsync(List<AirportDto> waypoints)
         {
-            if (waypoints == null || waypoints.Count < 2)
-                throw new ArgumentException("At least two waypoints are required.");
+            if (waypoints == null)
+                throw new ArgumentNullException(nameof(waypoints));
 
-            double totalDistance = 0.0;
+            if (waypoints.Count < 2)
+                throw new ArgumentException("At least two waypoints are required.", nameof(waypoints));
 
-            for (int i = 0; i < waypoints.Count - 1; i++)
+            
+            return await Task.Run(() =>
             {
-                var current = waypoints[i];
-                var next = waypoints[i + 1];
+                double totalDistance = 0.0;
 
-                totalDistance += CalculateDistanceBetween(current, next);
-            }
+                for (int i = 0; i < waypoints.Count - 1; i++)
+                {
+                    totalDistance += CalculateDistanceBetween(waypoints[i], waypoints[i + 1]);
+                }
 
-            return (int)Math.Round(totalDistance);
+                return (int)Math.Round(totalDistance);
+            });
         }
 
         private double CalculateDistanceBetween(AirportDto a, AirportDto b)

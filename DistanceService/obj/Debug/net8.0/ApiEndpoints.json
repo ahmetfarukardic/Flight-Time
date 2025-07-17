@@ -1,0 +1,23 @@
+[
+  {
+    "ContainingType": "DistanceService.Controllers.DistanceController",
+    "Method": "GetLocations",
+    "RelativePath": "api/Distance/between/{fromCode}/{toCode}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fromCode",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "toCode",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

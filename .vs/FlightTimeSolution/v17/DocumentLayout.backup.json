@@ -1,0 +1,81 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dell-Y\\Desktop\\test\\FlightTimeSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A6F3AF3B-C0CF-4D02-8729-C763E64E9BB3}|AirportService\\AirportService.csproj|c:\\users\\dell-y\\desktop\\test\\flighttimesolution\\airportservice\\controllers\\airportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6F3AF3B-C0CF-4D02-8729-C763E64E9BB3}|AirportService\\AirportService.csproj|solutionrelative:airportservice\\controllers\\airportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6F3AF3B-C0CF-4D02-8729-C763E64E9BB3}|AirportService\\AirportService.csproj|c:\\users\\dell-y\\desktop\\test\\flighttimesolution\\airportservice\\models\\airport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6F3AF3B-C0CF-4D02-8729-C763E64E9BB3}|AirportService\\AirportService.csproj|solutionrelative:airportservice\\models\\airport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6F3AF3B-C0CF-4D02-8729-C763E64E9BB3}|AirportService\\AirportService.csproj|c:\\users\\dell-y\\desktop\\test\\flighttimesolution\\airportservice\\data\\airportdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6F3AF3B-C0CF-4D02-8729-C763E64E9BB3}|AirportService\\AirportService.csproj|solutionrelative:airportservice\\data\\airportdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 330,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AirportController.cs",
+              "DocumentMoniker": "C:\\Users\\Dell-Y\\Desktop\\test\\FlightTimeSolution\\AirportService\\Controllers\\AirportController.cs",
+              "RelativeDocumentMoniker": "AirportService\\Controllers\\AirportController.cs",
+              "ToolTip": "C:\\Users\\Dell-Y\\Desktop\\test\\FlightTimeSolution\\AirportService\\Controllers\\AirportController.cs",
+              "RelativeToolTip": "AirportService\\Controllers\\AirportController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T15:56:36.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Airport.cs",
+              "DocumentMoniker": "C:\\Users\\Dell-Y\\Desktop\\test\\FlightTimeSolution\\AirportService\\Models\\Airport.cs",
+              "RelativeDocumentMoniker": "AirportService\\Models\\Airport.cs",
+              "ToolTip": "C:\\Users\\Dell-Y\\Desktop\\test\\FlightTimeSolution\\AirportService\\Models\\Airport.cs",
+              "RelativeToolTip": "AirportService\\Models\\Airport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T15:51:49.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AirportDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Dell-Y\\Desktop\\test\\FlightTimeSolution\\AirportService\\Data\\AirportDbContext.cs",
+              "RelativeDocumentMoniker": "AirportService\\Data\\AirportDbContext.cs",
+              "ToolTip": "C:\\Users\\Dell-Y\\Desktop\\test\\FlightTimeSolution\\AirportService\\Data\\AirportDbContext.cs",
+              "RelativeToolTip": "AirportService\\Data\\AirportDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T15:51:47.195Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 62,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

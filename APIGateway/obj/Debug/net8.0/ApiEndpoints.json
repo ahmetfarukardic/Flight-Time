@@ -1,0 +1,49 @@
+[
+  {
+    "ContainingType": "APIGateway.Controllers.GatewayController",
+    "Method": "GetAllAirports",
+    "RelativePath": "gateway/airports",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIGateway.Controllers.GatewayController",
+    "Method": "CreateAirport",
+    "RelativePath": "gateway/airports",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "airportJson",
+        "Type": "System.Object",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIGateway.Controllers.GatewayController",
+    "Method": "GetDistance",
+    "RelativePath": "gateway/distance/{fromCode}/{toCode}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fromCode",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "toCode",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

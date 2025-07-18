@@ -1,5 +1,6 @@
 ﻿using APIGateway.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.AccessControl;
 
 namespace APIGateway.Controllers
 {
@@ -7,17 +8,39 @@ namespace APIGateway.Controllers
     [Route("gateway")]
     public class GatewayController : ControllerBase
     {
-        private readonly IAirportServiceClient _airportServiceClient;
+        private readonly IAirportLocationClient _airportServiceClient;
+        private readonly IDistanceServiceClient _distanceServiceClient;
+        private readonly IAircraftServiceClient _aircraftServiceClient;
 
-        public GatewayController(IAirportServiceClient airportServiceClient)
+        public GatewayController(IAirportLocationClient airportServiceClient, IDistanceServiceClient distanceServiceClient, IAircraftServiceClient aircraftServiceClient)
         {
             _airportServiceClient = airportServiceClient;
+            _distanceServiceClient = distanceServiceClient;
+            _aircraftServiceClient = aircraftServiceClient;
         }
 
-        [HttpGet("locations/{departure}/{destination}")]
-        public async Task<IActionResult> GetLocationsViaAirportService(string departure, string destination)
+        [HttpGet("location/{iataCode}")]
+        public async Task<IActionResult> GetLocationViaAirportService(string iataCode)
         {
-            var content = await _airportServiceClient.GetLocationsAsync(departure, destination);
+            var content = await _airportServiceClient.GetLocationAsync(iataCode);
+            return Content(content, "application/json");
+        }
+
+        [HttpGet("distance/{departure}/{destination}")]
+        public async Task<IActionResult> GetDistanceViaDistanceService(string departure, string destination)
+        {
+            var content = await _distanceServiceClient.GetDistanceAsync(departure, destination);
+            return Content(content, "application/json");
+        }
+        
+        [HttpGet("aircraft/{typeName}")]
+        public async Task<IActionResult> GetAircraftViaAircraftService(string typeName)
+        {
+            var content = await _aircraftServiceClient.GetAircraftByTypeNameAsync(typeName);
+
+            if (string.IsNullOrEmpty(content))
+                return NotFound();
+
             return Content(content, "application/json");
         }
 

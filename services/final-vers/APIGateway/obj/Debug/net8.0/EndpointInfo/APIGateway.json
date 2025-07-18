@@ -5,34 +5,21 @@
     "version": "1.0"
   },
   "paths": {
-    "/gateway/airports": {
+    "/gateway/location/{iataCode}": {
       "get": {
         "tags": [
           "Gateway"
         ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "Gateway"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": { }
-            },
-            "text/json": {
-              "schema": { }
-            },
-            "application/*+json": {
-              "schema": { }
+        "parameters": [
+          {
+            "name": "iataCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
           }
-        },
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -40,14 +27,14 @@
         }
       }
     },
-    "/gateway/distance/{fromCode}/{toCode}": {
+    "/gateway/distance/{departure}/{destination}": {
       "get": {
         "tags": [
           "Gateway"
         ],
         "parameters": [
           {
-            "name": "fromCode",
+            "name": "departure",
             "in": "path",
             "required": true,
             "schema": {
@@ -55,7 +42,29 @@
             }
           },
           {
-            "name": "toCode",
+            "name": "destination",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/gateway/aircraft/{typeName}": {
+      "get": {
+        "tags": [
+          "Gateway"
+        ],
+        "parameters": [
+          {
+            "name": "typeName",
             "in": "path",
             "required": true,
             "schema": {

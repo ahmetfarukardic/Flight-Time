@@ -1,0 +1,11 @@
+C:\Users\Dell-Y\Desktop\FlightTimeSolutionlocal\APIGateway\obj\Release\net8.0\PubTmp\Out\APIGateway.exe
+C:\Users\Dell-Y\Desktop\FlightTimeSolutionlocal\APIGateway\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+C:\Users\Dell-Y\Desktop\FlightTimeSolutionlocal\APIGateway\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\Users\Dell-Y\Desktop\FlightTimeSolutionlocal\APIGateway\obj\Release\net8.0\PubTmp\Out\APIGateway.dll
+C:\Users\Dell-Y\Desktop\FlightTimeSolutionlocal\APIGateway\obj\Release\net8.0\PubTmp\Out\APIGateway.deps.json
+C:\Users\Dell-Y\Desktop\FlightTimeSolutionlocal\APIGateway\obj\Release\net8.0\PubTmp\Out\APIGateway.runtimeconfig.json
+C:\Users\Dell-Y\Desktop\FlightTimeSolutionlocal\APIGateway\obj\Release\net8.0\PubTmp\Out\APIGateway.pdb
+C:\Users\Dell-Y\Desktop\FlightTimeSolutionlocal\APIGateway\obj\Release\net8.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Users\Dell-Y\Desktop\FlightTimeSolutionlocal\APIGateway\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Dell-Y\Desktop\FlightTimeSolutionlocal\APIGateway\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Dell-Y\Desktop\FlightTimeSolutionlocal\APIGateway\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll

@@ -6,9 +6,9 @@ public class HttpAirportLocationClient : IAirportLocationClient
     private readonly HttpClient _httpClient;
     private const string AirportServiceUrl = "https://airportservice-c8e4eve9ghfhdfcn.germanywestcentral-01.azurewebsites.net/api/airports/locations/";
 
-    public HttpAirportLocationClient(IHttpClientFactory httpClientFactory)
+    public HttpAirportLocationClient(HttpClient httpClient)
     {
-        _httpClient = httpClientFactory.CreateClient();
+        _httpClient = httpClient;
     }
 
     public async Task<List<LocationDto>> GetLocationsAsync(string departure, string destination)

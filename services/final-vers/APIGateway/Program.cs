@@ -8,7 +8,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddHttpClient<HttpAirportServiceClient>();
-builder.Services.AddScoped<IAirportServiceClient, HttpAirportServiceClient>();
+builder.Services.AddScoped<IAirportLocationClient, HttpAirportServiceClient>();
+builder.Services.AddHttpClient<HttpDistanceServiceClient>();
+builder.Services.AddScoped<IDistanceServiceClient, HttpDistanceServiceClient>();
+builder.Services.AddHttpClient<HttpAircraftServiceClient>();
+builder.Services.AddScoped<IAircraftServiceClient, HttpAircraftServiceClient>();
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

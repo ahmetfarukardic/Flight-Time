@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "AircraftService.Controllers.AircraftController",
+    "Method": "GetAircraftByTypeName",
+    "RelativePath": "api/aircraft/{typeName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "typeName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

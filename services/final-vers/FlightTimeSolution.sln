@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36301.6 d17.14
+VisualStudioVersion = 17.14.36301.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIGateway", "APIGateway\APIGateway.csproj", "{4596D3F7-667A-4A58-A194-F74CD7484873}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirportService", "AirportService\AirportService.csproj", "{A6F3AF3B-C0CF-4D02-8729-C763E64E9BB3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistanceService", "DistanceService\DistanceService.csproj", "{14414068-9486-45A8-BD41-A34C34ED54AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AircraftService", "AircraftService\AircraftService.csproj", "{425F00CA-02D9-48ED-A61A-83F13D192E7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{14414068-9486-45A8-BD41-A34C34ED54AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14414068-9486-45A8-BD41-A34C34ED54AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14414068-9486-45A8-BD41-A34C34ED54AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{425F00CA-02D9-48ED-A61A-83F13D192E7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{425F00CA-02D9-48ED-A61A-83F13D192E7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{425F00CA-02D9-48ED-A61A-83F13D192E7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{425F00CA-02D9-48ED-A61A-83F13D192E7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

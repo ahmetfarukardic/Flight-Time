@@ -1,0 +1,12 @@
+C:\Users\Dell-Y\Desktop\FlightTimeSolutionlocal\DistanceService\obj\Release\net8.0\PubTmp\Out\DistanceService.exe
+C:\Users\Dell-Y\Desktop\FlightTimeSolutionlocal\DistanceService\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+C:\Users\Dell-Y\Desktop\FlightTimeSolutionlocal\DistanceService\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\Users\Dell-Y\Desktop\FlightTimeSolutionlocal\DistanceService\obj\Release\net8.0\PubTmp\Out\DistanceService.dll
+C:\Users\Dell-Y\Desktop\FlightTimeSolutionlocal\DistanceService\obj\Release\net8.0\PubTmp\Out\DistanceService.deps.json
+C:\Users\Dell-Y\Desktop\FlightTimeSolutionlocal\DistanceService\obj\Release\net8.0\PubTmp\Out\DistanceService.runtimeconfig.json
+C:\Users\Dell-Y\Desktop\FlightTimeSolutionlocal\DistanceService\obj\Release\net8.0\PubTmp\Out\DistanceService.pdb
+C:\Users\Dell-Y\Desktop\FlightTimeSolutionlocal\DistanceService\obj\Release\net8.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Users\Dell-Y\Desktop\FlightTimeSolutionlocal\DistanceService\obj\Release\net8.0\PubTmp\Out\Newtonsoft.Json.dll
+C:\Users\Dell-Y\Desktop\FlightTimeSolutionlocal\DistanceService\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Dell-Y\Desktop\FlightTimeSolutionlocal\DistanceService\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Dell-Y\Desktop\FlightTimeSolutionlocal\DistanceService\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll

@@ -17,9 +17,9 @@ namespace AircraftService.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Aircraft>> GetAircraft(Guid id)
+        public async Task<ActionResult<AircraftRegistration>> GetAircraft(string id)
         {
-            var Aircraft = await _context.Aircrafts.FindAsync(id);
+            var Aircraft = await _context.AircraftRegistrations.FindAsync(id);
 
             if (Aircraft == null)
                 return NotFound();
@@ -30,29 +30,17 @@ namespace AircraftService.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAircrafts()
         {
-            var Aircrafts = await _context.Aircrafts.ToListAsync();
+            var Aircrafts = await _context.AircraftRegistrations.ToListAsync();
             return Ok(Aircrafts);
         }
 
         [HttpPost]
-        public async Task<ActionResult<Aircraft>> CreateAircraft(Aircraft Aircraft)
+        public async Task<ActionResult<AircraftRegistration>> CreateAircraft(AircraftRegistration Aircraft)
         {
-            _context.Aircrafts.Add(Aircraft);
+            _context.AircraftRegistrations.Add(Aircraft);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetAircraft), new { id = Aircraft.Id }, Aircraft);
-        }
-
-        
-        [HttpGet("icao/{code}")]
-        public async Task<ActionResult<Aircraft>> GetAircraftByCode(string code)
-        {
-            var Aircraft = await _context.Aircrafts.FirstOrDefaultAsync(a => a.Icao == code);
-
-            if (Aircraft == null)
-                return NotFound();
-
-            return Aircraft;
         }
 
     }

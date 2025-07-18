@@ -1,4 +1,4 @@
-﻿using AircraftService.Models;
+using AircraftService.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
@@ -10,8 +10,7 @@ namespace AircraftService.Data
         {
         }
 
-        public DbSet<Aircraft> Aircrafts { get; set; }
-        public DbSet<Aircraft> AircraftRegistrations { get; set; }
+        public DbSet<AircraftRegistration> AircraftRegistrations { get; set; }
         
     }
 }

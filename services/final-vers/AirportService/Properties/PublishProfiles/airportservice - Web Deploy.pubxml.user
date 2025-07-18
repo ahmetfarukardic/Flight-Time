@@ -6,7 +6,7 @@ bu işlemin davranışını düzenleyebilirsiniz. Bununla ilgili daha fazla bilg
 <Project>
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <History>True|2025-07-18T08:06:08.9827698Z||;True|2025-07-18T10:53:41.9459182+03:00||;True|2025-07-17T16:05:38.2736725+03:00||;True|2025-07-17T15:19:47.1847337+03:00||;True|2025-07-17T15:18:34.6202198+03:00||;True|2025-07-16T16:10:19.2583268+03:00||;</History>
+    <History>True|2025-07-18T12:45:03.8975932Z||;True|2025-07-18T11:06:08.9827698+03:00||;True|2025-07-18T10:53:41.9459182+03:00||;True|2025-07-17T16:05:38.2736725+03:00||;True|2025-07-17T15:19:47.1847337+03:00||;True|2025-07-17T15:18:34.6202198+03:00||;True|2025-07-16T16:10:19.2583268+03:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

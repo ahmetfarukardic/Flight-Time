@@ -19,5 +19,31 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DistanceController",
+    "Method": "GetFlightTime",
+    "RelativePath": "api/distance/{departure}/{destination}/{AircraftType}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "departure",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "destination",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "AircraftType",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

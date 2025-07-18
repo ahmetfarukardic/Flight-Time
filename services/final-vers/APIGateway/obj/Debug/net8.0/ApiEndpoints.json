@@ -38,6 +38,32 @@
   },
   {
     "ContainingType": "APIGateway.Controllers.GatewayController",
+    "Method": "GetFlightTimeFromDistanceService",
+    "RelativePath": "gateway/flighttime/{departure}/{destination}/{aircraftType}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "departure",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "destination",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "aircraftType",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIGateway.Controllers.GatewayController",
     "Method": "GetLocationViaAirportService",
     "RelativePath": "gateway/location/{iataCode}",
     "HttpMethod": "GET",

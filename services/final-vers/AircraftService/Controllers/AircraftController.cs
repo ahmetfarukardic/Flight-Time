@@ -1,5 +1,6 @@
 ﻿using AircraftService.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace AircraftService.Controllers
 {
@@ -24,5 +25,17 @@ namespace AircraftService.Controllers
 
             return Ok(aircraft);
         }
+
+        [HttpGet("speed/{typeName}")]
+        public async Task<IActionResult> GetAircraftSpeed(string typeName)
+        {
+            var speed = await _aircraftService.GetAircraftSpeedByTypeNameAsync(typeName);
+
+            if (speed == null)
+                return NotFound("Aircraft not found.");
+
+            return Ok(speed);
+        }
+
     }
 }

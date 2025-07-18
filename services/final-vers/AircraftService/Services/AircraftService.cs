@@ -7,6 +7,7 @@ namespace AircraftService.Services
     public interface IAircraftService
     {
         Task<AircraftRegistration> GetAircraftByTypeNameAsync(string typeName);
+        Task<int?> GetAircraftSpeedByTypeNameAsync(string typeName);
     }
 
     public class AircraftService : IAircraftService
@@ -22,6 +23,13 @@ namespace AircraftService.Services
         {
             return await _context.AircraftRegistrations
                 .FirstOrDefaultAsync(a => a.TypeName == typeName);
+        }
+
+        public async Task<int?> GetAircraftSpeedByTypeNameAsync(string typeName)
+        {
+            var aircraft = await GetAircraftByTypeNameAsync(typeName);
+
+            return aircraft?.SpeedMph;
         }
     }
 }

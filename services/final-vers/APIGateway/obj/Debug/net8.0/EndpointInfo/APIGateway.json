@@ -78,6 +78,44 @@
           }
         }
       }
+    },
+    "/gateway/flighttime/{departure}/{destination}/{aircraftType}": {
+      "get": {
+        "tags": [
+          "Gateway"
+        ],
+        "parameters": [
+          {
+            "name": "departure",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "destination",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "aircraftType",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": { }

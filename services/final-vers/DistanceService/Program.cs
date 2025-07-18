@@ -11,6 +11,8 @@ builder.Services.AddHttpClient();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IGreatCircleDistanceCalculator, DistanceCalculator>();
 builder.Services.AddScoped<IAirportLocationClient, HttpAirportLocationClient>();
+builder.Services.AddHttpClient<IAircraftTypeClient, HttpAircraftTypeClient>();
+
 
 
 

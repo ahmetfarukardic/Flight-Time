@@ -44,5 +44,16 @@ namespace APIGateway.Controllers
             return Content(content, "application/json");
         }
 
+        [HttpGet("flighttime/{departure}/{destination}/{aircraftType}")]
+        public async Task<IActionResult> GetFlightTimeFromDistanceService(string departure, string destination, string aircraftType)
+        {
+            var content = await _distanceServiceClient.GetFlightTimeAsync(departure, destination, aircraftType);
+
+            if (content == null)
+                return NotFound("Uçuş süresi hesaplanamadı.");
+
+            return Content(content, "application/json");
+        }
+
     }
 }

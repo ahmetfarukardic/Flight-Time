@@ -19,5 +19,17 @@ namespace APIGateway.Services
             response.EnsureSuccessStatusCode();
             return await response.Content.ReadAsStringAsync();
         }
+
+        public async Task<string> GetFlightTimeAsync(string departure, string destination, string aircraftType)
+        {
+            var url = $"{DistanceServiceBaseUrl}/{departure}/{destination}/{aircraftType}";
+
+            var response = await _httpClient.GetAsync(url);
+
+            if (!response.IsSuccessStatusCode)
+                return null;
+
+            return await response.Content.ReadAsStringAsync();
+        }
     }
 }

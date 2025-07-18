@@ -9,10 +9,16 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddHttpClient<HttpAirportServiceClient>();
 builder.Services.AddScoped<IAirportLocationClient, HttpAirportServiceClient>();
+
+
 builder.Services.AddHttpClient<HttpDistanceServiceClient>();
 builder.Services.AddScoped<IDistanceServiceClient, HttpDistanceServiceClient>();
+
+
+
 builder.Services.AddHttpClient<HttpAircraftServiceClient>();
 builder.Services.AddScoped<IAircraftServiceClient, HttpAircraftServiceClient>();
+
 
 
 builder.Services.AddControllers();

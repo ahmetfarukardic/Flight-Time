@@ -34,6 +34,44 @@
           }
         }
       }
+    },
+    "/api/distance/{departure}/{destination}/{AircraftType}": {
+      "get": {
+        "tags": [
+          "Distance"
+        ],
+        "parameters": [
+          {
+            "name": "departure",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "destination",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AircraftType",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": { }
